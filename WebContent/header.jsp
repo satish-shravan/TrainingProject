@@ -7,14 +7,12 @@
 <title>E Learning</title>
 </head>
 <body>
+<h2><u>E Learning</u></h2>
 
-<h2>WELCOME TO E LEARNING</h2>
-<hr>
 <a href="registration.jsp">Register</a>&#8287&#8287
-<a href="contact.jsp">Contact</a>&#8287&#8287
 <a href="course.jsp">Course</a>&#8287&#8287
 <a href="feedback.jsp">Feedback</a>&#8287&#8287
-<a href="retrive.jsp">Admin</a>&#8287&#8287
+<a href="contact.jsp">Contact</a>&#8287&#8287
 <hr>
 
 </body>

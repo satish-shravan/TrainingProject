@@ -10,6 +10,15 @@
 <body>
 
 
+	<DIV ALIGN="left"><form name="main0" action="login.jsp" method="get">
+        <input type="submit" value="Login">
+    </form></DIV>
+    <br>
+	 <form name="main1"  method="get" action="registration.jsp">
+        <input type="submit" name="ter" value="Don't have an account" >
+   </form>
+   <br>
+   
 
 </body>
 </html>

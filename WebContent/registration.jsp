@@ -8,6 +8,9 @@
 <title>Register </title>
 </head>
 <body>
+
+<h4><u>Register a new User</u></h4>
+
 	 <form action="user_register" method="POST">
         <pre>
         User Id   : <input type="number" name="user_id" /><br>

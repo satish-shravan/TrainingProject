@@ -6,6 +6,6 @@ public interface CourseDAO {
 	
 	boolean addCourse(Course course);
 	
-	boolean deleteCourseByName(String courseName);
+	boolean deleteCourseById(int course_id);
 
 }

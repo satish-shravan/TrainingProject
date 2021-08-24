@@ -13,45 +13,24 @@ import com.amdocs.training.dao.UserDAO;
 import com.amdocs.training.implementation.UserImpl;
 import com.amdocs.training.model.User;
 
-@WebServlet("/user_register")
-public class UserController extends HttpServlet {
+@WebServlet("/delete_user")
+public class DeleteUser extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		PrintWriter out = response.getWriter();
 		int id = Integer.parseInt(request.getParameter("user_id"));
-		String name = request.getParameter("name");
-		String reg_date = request.getParameter("reg_date");
-		String password = request.getParameter("password");
-		String email = request.getParameter("email");
-		String address = request.getParameter("address");
-		String photo = request.getParameter("upload_photo");
-		long phone = Long.parseLong(request.getParameter("phone"));
-		
-		User user = new User(id, name, reg_date, address, email, password, phone, photo);
-		
-		System.out.println(id+" "+ name);
-		
+
 		UserDAO dao = new UserImpl();
 			
-		boolean status = dao.saveUser(user);
+		boolean status = dao.deleteUserById(id);
 		
 		if(status) {
-			out.println("Saved Successfully!");
-			out.print(dao.getUserById(id).getName());
-			response.sendRedirect("user_main_page.jsp");
+			out.println("Deleted Successfully!");
 		}
 		else {
 			out.println("try again");
 		}
-		
-	
 	}
-	
-
-	
-	
-	
-
 }

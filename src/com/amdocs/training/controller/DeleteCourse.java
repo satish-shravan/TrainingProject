@@ -13,39 +13,26 @@ import com.amdocs.training.dao.CourseDAO;
 import com.amdocs.training.dao.UserDAO;
 import com.amdocs.training.implementation.CourseImpl;
 import com.amdocs.training.implementation.UserImpl;
-import com.amdocs.training.model.Course;
 import com.amdocs.training.model.User;
 
-@WebServlet("/course")
-public class CourseController extends HttpServlet {
+@WebServlet("/delete_course")
+public class DeleteCourse extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		PrintWriter out = response.getWriter();
-		int id = Integer.parseInt(request.getParameter("c_id"));
-		String c_name = request.getParameter("c_name");
-		String c_desc = request.getParameter("c_desc");
-		Double c_fee = Double.parseDouble(request.getParameter("c_fee"));
-		String c_res = request.getParameter("c_res");
-		
-		System.out.println("desc : "+ c_desc);
-	
-		Course course = new Course(id, c_name, c_desc, c_fee, c_res);
-		
+		int id = Integer.parseInt(request.getParameter("course_id"));
+
 		CourseDAO dao = new CourseImpl();
-		
-		
-		boolean status = dao.addCourse(course);
+			
+		boolean status = dao.deleteCourseById(id);
 		
 		if(status) {
-			out.println("Saved Successfully!");
+			out.println("Deleted Successfully!");
 		}
 		else {
 			out.println("try again");
 		}
 	}
-	
-	
-
 }

@@ -1,3 +1,4 @@
+
 <%@page import="java.sql.*"%>
 
 <%
@@ -18,14 +19,14 @@ ResultSet resultSet = null;
 <!DOCTYPE html>
 <html>
 <body>
-
-<h1>Retrieve data from database in jsp</h1>
+<h3><u>All Course</u></h3>
 <table border="1">
 <tr>
-<td><h4><u>Admin ID</u></h4></td>
+<td><h4><u>Course ID</u></h4></td>
 <td><h4><u>Name</u></h4></td>
-<td><h4><u>Email</u></h4></td>
-<td><h4><u>Password</u></h4></td>
+<td><h4><u>Description</u></h4></td>
+<td><h4><u>Fees</u></h4></td>
+<td><h4><u>Resource</u></h4></td>
 
 
 </tr>
@@ -33,15 +34,16 @@ ResultSet resultSet = null;
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 statement=connection.createStatement();
-String sql ="select * from admin";
+String sql ="select * from course";
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
 <tr>
-<td><%=resultSet.getString("admin_id") %></td>
-<td><%=resultSet.getString("name") %></td>
-<td><%=resultSet.getString("email") %></td>
-<td><%=resultSet.getString("password") %></td>
+<td><%=resultSet.getString("course_id") %></td>
+<td><%=resultSet.getString("c_name") %></td>
+<td><%=resultSet.getString("c_desc") %></td>
+<td><%=resultSet.getString("c_fee") %></td>
+<td><%=resultSet.getString("c_res") %></td>
 </tr>
 <%
 }

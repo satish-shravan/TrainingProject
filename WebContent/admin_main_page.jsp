@@ -4,9 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Admin</title>
 </head>
 <body>
+<h2><u>Admin</u></h2>
+
+<a href="admin_user.jsp">Users</a>&#8287&#8287
+<a href="admin_course.jsp">Course</a>&#8287&#8287
+<a href="admin_feedback.jsp">Feedback</a>&#8287&#8287
+<a href="admin_contact.jsp">Contact</a>&#8287&#8287
+<hr>
 
 </body>
 </html>

@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,6 +18,7 @@ import javax.sql.DataSource;
 
 import com.amdocs.training.database.DataSourceUtil;
 
+@WebServlet("/login")
 public class LoginController extends HttpServlet {
 	
 	 DataSource ds = DataSourceUtil.dataSource();
@@ -57,12 +59,12 @@ public class LoginController extends HttpServlet {
 	   	 if(user_status)
 	   	 {
 	   		 System.out.println("User");
-	   		 response.sendRedirect("user_main_page.jsp");
+	   		 response.sendRedirect("course.jsp");
 	   	 }
 	   	 else if(admin_status_)
 	   	 {
 	   		 System.out.println("Admin");
-	   		 response.sendRedirect("admin_main_page.jsp");
+	   		 response.sendRedirect("admin_user.jsp");
 	   	 }
 	   	 else
 	   	 {

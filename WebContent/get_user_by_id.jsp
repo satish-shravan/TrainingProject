@@ -5,16 +5,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>ADMIN </title>
+<title>Get User  </title>
 </head>
 <body>
-	 <form action="admin" method="POST">
+
+<h4><u>Get User By ID </u></h4>
+
+	 <form action="get_user" method="POST">
         <pre>
-        Admin Id  : <input type="number" name="admin_id" /><br>
-        Username  : <input type="text" name="name" /><br>
-        Email     : <input type="email" name="email" /><br>
-        Password  : <input type="password" name="password" /><br>
-                    <input type="submit" value="Add Admin" /><br>
+        Enter user id     : <input type="number" name="id" /><br>
+                    <input type="submit" value="Fetch User" /><br>
+                    <a href="admin_user.jsp">Users</a>
        </pre>
      </form>
 

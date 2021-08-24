@@ -40,13 +40,13 @@ public class CourseImpl implements CourseDAO {
 
 
 	@Override
-	public boolean deleteCourseByName(String courseName) {
-		String query = "delete from course where c_name=?";
+	public boolean deleteCourseById(int course_id) {
+		String query = "delete from course where course_id=?";
 		
 		try {
 			conn = dataSource.getConnection();
 			PreparedStatement ps = conn.prepareStatement(query);
-			ps.setString(1,courseName);
+			ps.setInt(1,course_id);
 			ps.executeUpdate();
 			return true;
 		} catch (SQLException e) {

@@ -5,16 +5,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>ADMIN </title>
+<title>Delete Course  </title>
 </head>
 <body>
-	 <form action="admin" method="POST">
+
+<h4><u>Delete User By ID </u></h4>
+
+	 <form action="delete_course" method="POST">
         <pre>
-        Admin Id  : <input type="number" name="admin_id" /><br>
-        Username  : <input type="text" name="name" /><br>
-        Email     : <input type="email" name="email" /><br>
-        Password  : <input type="password" name="password" /><br>
-                    <input type="submit" value="Add Admin" /><br>
+        Enter user id     : <input type="number" name="course_id" /><br>
+                    <input type="submit" value="Delete" /><br>
+                    <a href="admin_course.jsp">Course</a>
        </pre>
      </form>
 
